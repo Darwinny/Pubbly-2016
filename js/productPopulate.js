@@ -2,8 +2,6 @@
  * Created by Jason on 1/25/2016.
  */
 
-window.books = [];
-
 // Book Object constructor
 Book = function(parseRef) {
     var pobj = parseRef;
