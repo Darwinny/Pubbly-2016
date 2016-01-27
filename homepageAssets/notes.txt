@@ -1,0 +1,5 @@
+Note to self.
+
+Move all root directory image assets here and refactor
+when you get a minute. Nothing should be in the root dir
+except index.html
