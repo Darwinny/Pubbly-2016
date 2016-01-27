@@ -84,9 +84,8 @@ td {
 /* main content of the site */
 #content .mainContent {
 	float: left;
-	width: 70%;
+	width: 100%;
 	text-align: center;
-	padding-left: 4%;
 }
 /*menubar's properties for menus in sidebar */
 #content .sidebar #menubar {
@@ -127,9 +126,9 @@ td {
 /* Each product Information in the catalog */
 .mainContent .productRow .productInfo {
 	float: left;
-	padding-left: 5%;
-	padding-right: 5%;
-	width: 22%;
+	padding-left: 2.5%;
+	padding-right: 2.5%;
+	width: 20%;
 }
 /* Prices of a products in catalog */
 .productRow .productInfo .price {

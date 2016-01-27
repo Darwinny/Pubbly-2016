@@ -58,43 +58,19 @@
         </tr>
     </table>
     <div id="content">
-        <section class="sidebar">
-            <!-- This adds a sidebar with 1 searchbox,2 menusets, each with 4 links -->
-            <input type="text" id="search" value="search">
-
-            <div id="menubar">
-                <nav class="menu">
-                    <h2><!-- Title for menuset 1 -->This side panel is coming out </h2>
-                    <hr>
-                    <ul>
-                        <!-- List of links under menuset 1 -->
-                        <li><a href="#" title="Link">Another column of books here instead</a></li>
-                        <li><a href="#" title="Link">Read</a></li>
-                        <li><a href="#" title="Link">To Read</a></li>
-                        <li class="notimp">
-                            <!-- notimp class is applied to remove this link from the tablet and phone views --><a
-                                href="#" title="Link">Wish List</a></li>
-                    </ul>
-                </nav>
-                <nav class="menu">
-                    <h2>Find Books </h2>
-                    <!-- Title for menuset 2 -->
-                    <hr>
-                    <ul>
-                        <!--List of links under menuset 2 -->
-                        <li><a href="#" title="Link">Favorites</a></li>
-                        <li><a href="#" title="Link">Recommended</a></li>
-                        <li><a href="#" title="Link">New</a></li>
-                        <li class="notimp">
-                            <!-- notimp class is applied to remove this link from the tablet and phone views -->
-                            <a href="#" title="Link">Classics</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </section>
+        <!-- Sidebar HTML removed, can be found at
+        reusables/SideBarWithSearchBoxAndTemplateMenulists.html
+        Removed to make room for 4th colum of books.
+        -->
         <section class="mainContent">
             <div class="productRow"><!-- Each product row contains info of 3 elements -->
+                <article class="productInfo"><!-- Each individual product description -->
+                    <div><img alt="sample" src="homepageAssets/pigswithdots.png"></div>
+                    <p class="price">Free!</p>
+
+                    <p class="productContent">The Fourth Little Pig </p>
+                    <input type="button" name="button" value="Buy" class="buyButton">
+                </article>
                 <article class="productInfo"><!-- Each individual product description -->
                     <div><img alt="sample" src="homepageAssets/pigswithdots.png"></div>
                     <p class="price">Free!</p>
@@ -127,6 +103,13 @@
                     <input type="button" name="button" value="Buy" class="buyButton">
                 </article>
                 <article class="productInfo"> <!-- Each individual product description -->
+                    <div><img alt="sample" src="homepageAssets/stelladots.png"></div>
+                    <p class="price">$4.99</p>
+
+                    <p class="productContent">Stellaluna</p>
+                    <input type="button" name="button" value="Buy" class="buyButton">
+                </article>
+                <article class="productInfo"> <!-- Each individual product description -->
                     <div><img alt="sample" src="homepageAssets/frogandflydots.png"></div>
                     <p class="price">$4.99</p>
 
@@ -142,6 +125,13 @@
                 </article>
             </div>
             <div class="productRow">
+                <article class="productInfo"> <!-- Each individual product description -->
+                    <div><img alt="sample" src="homepageAssets/bluetruckdots.png"></div>
+                    <p class="price">$4.99</p>
+
+                    <p class="productContent">The Little Blue Truck</p>
+                    <input type="button" name="button" value="Buy" class="buyButton">
+                </article>
                 <article class="productInfo"> <!-- Each individual product description -->
                     <div><img alt="sample" src="homepageAssets/bluetruckdots.png"></div>
                     <p class="price">$4.99</p>
