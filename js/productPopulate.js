@@ -6,8 +6,7 @@ window.books = [];
 
 // Book Object constructor
 Book = function(parseRef) {
-    // var pobj = parseRef;
-    this.pobj = parseRef;
+    var pobj = parseRef;
     this.name = pobj.get("name");
     var coverObj = pobj.get("cover");
     if (this.coverObj) {
