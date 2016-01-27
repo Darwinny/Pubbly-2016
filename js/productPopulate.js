@@ -56,13 +56,13 @@ function loadBooks() {
             for (var b = 0; b < res.length; b++) {
                 window.books.push(new Book(res[b],false));
             }
+            console.log(books);
         },
         error: function(e) {
             console.error("Parse database problem, error object:");
             console.error(e);
         }
     });
-    console.log(books);
 }
 
 
