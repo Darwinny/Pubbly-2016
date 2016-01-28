@@ -47,6 +47,11 @@ Book = function(parseRef) {
     }
 };
 
+// productRow Object constructor
+ProductRow = function(num) {
+    //
+}
+
 function loadBooks() {
     var P_Book = Parse.Object.extend("Books");
     var bookQuery = new Parse.Query(P_Book);
@@ -56,13 +61,35 @@ function loadBooks() {
             for (var b = 0; b < res.length; b++) {
                 window.books.push(new Book(res[b],false));
             }
-            console.log(books);
+            console.log(books[0]);
+            attachBooks(0,books.length);
         },
         error: function(e) {
             console.error("Parse database problem, error object:");
             console.error(e);
         }
     });
+}
+function attachBooks(startCount,endCount) {
+    if (startCount != undefined && endCount != undefined) {
+        if (endCount > books.length) {
+            console.warn("Function call warning: endCount is greater than" +
+                " window.books.length. endCount manually set to length of global array.");
+            endCount = books.length;
+        }
+        var curRow = 0;
+        for (var b = startCount; b < endCount; b++) {
+            var cur = books[b];
+            console.log("Append book " + b + " to row " + curRow);
+            // ProductRow[curRow]
+            if ((b + 1) % 4 == 0) {
+                curRow++;
+            }
+        }
+    }   else    {
+        console.error("Function call error: No startCount or endCount given");
+        return false;
+    }
 }
 
 

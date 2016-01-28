@@ -30,8 +30,8 @@ window.books = [];
  *
  * Switch to www.Pubbly.com/ once we go public.
  */
-window.rootURL = "/";
+window.rootURL = "";
 
 // No cover file in Parse database (Pubbly Market -> Books)
-window.brokenBookCoverURL = "homepageAssets/brokenImage.png";
+window.brokenBookCoverURL = "homepageAssets/brokenCover.png";
 
