@@ -11,7 +11,8 @@
 
 var scriptsToLoad = [
     "js/globals",
-    "js/productPopulate"
+    "js/helper",
+    // "js/productPopulate"
 ];
 $(document).ready(function () {
     for (var s = 0; s < scriptsToLoad.length; s++) {
