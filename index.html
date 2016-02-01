@@ -29,7 +29,16 @@
     to alter the index. This is an attempt to keep me (jason) from every having to
     alter raw html.
     -->
-    <script src="js/chainLoader.js"></script>
+   <!-- <script src="js/chainLoader.js"></script> -->
+
+    <!--
+    But wait, there's problems! Turns out chrome can't load or debug js scripts loaded
+    on the fly. Or maybe it can, but I haven't figured out workspaces yet For now, I'll
+     set script tags here for debugging, and hopefully remember to clear
+    them on reupload. Or until I can get a better system.
+    TODO: Figure out better system.
+    -->
+    <script src="js/productPopulate.js"></script>
 </head>
 <body>
 <div id="mainWrapper">
@@ -47,16 +56,10 @@
 
         <p>This section will contain a moving image of some kind.</p>
     </section>
-
-    <table>
-        <tr>
-            <td>New</td>
-            <td>Recommended</td>
-            <td>My Books</td>
-            <td>These subjects will be spaced out better and be part of a bar . . . to com</td>
-            <td>Search box here</td>
-        </tr>
-    </table>
+      <div id="newbutton">NEW</div>
+        <div id="recommendedbutton">RECOMMENDED</div>
+        <div id="mybooksbutton">MY BOOKS</div>
+        <div><input type="text" id="search" value="search"></div>
     <div id="content">
         <!-- Sidebar HTML removed, can be found at
         reusables/SideBarWithSearchBoxAndTemplateMenulists.html

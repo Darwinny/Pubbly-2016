@@ -11,13 +11,13 @@
 
 var scriptsToLoad = [
     "js/globals",
+    "js/helper",
     "js/productPopulate"
 ];
 $(document).ready(function () {
     for (var s = 0; s < scriptsToLoad.length; s++) {
         $.getScript(scriptsToLoad[s] + ".js")
             .done(function (script, textStatus) {
-                console.log(textStatus);
                 scriptLoadedCallback();
             })
             .fail(function (jqxhr, settings, exception) {
