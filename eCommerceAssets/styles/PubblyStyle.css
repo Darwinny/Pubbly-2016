@@ -115,6 +115,58 @@ header {
 	text-transform:uppercase;
 	border-radius: 5px;
 }
+
+.purpledot {
+	width:15px;
+	height:15px;
+	border-radius:50px;
+	float:left;
+	background-color:#8867ac;
+	margin-left:67px;
+}
+
+.darkbluedot {
+	width:15px;
+	height:15px;
+	border-radius:50px;
+	float:left;
+	margin-left:6px;
+	background-color:#3a4d81;
+
+}
+.orangedot {
+	width:15px;
+	height:15px;
+	border-radius:50px;
+	float:left;
+	margin-left:6px;
+	background-color:#e36324;
+}
+.reddot {
+	width:15px;
+	height:15px;
+	border-radius:50px;
+	float:left;
+	margin-left:6px;
+	background-color:#b3252a;
+}
+.lightbluedot {
+	width:15px;
+	height:15px;
+	border-radius:50px;
+	float:left;
+	margin-left:6px;
+	background-color:#5aacc5;
+}
+.greendot {
+	width:15px;
+	height:15px;
+	border-radius:50px;
+	float:left;
+	margin-left:6px;
+	background-color:#91bd49;
+}
+
 /* Whole page content */
 #mainWrapper {
 	width: 80%;
@@ -138,7 +190,7 @@ header {
 	color: rgba(136,103,172,1.00);
 	font-size: 22px;
 	position: relative;
-	top: -20px;
+	top: -18px;
 }
 /* Content holder for products in catalog*/
 .productRow .productInfo .productContent {
@@ -148,7 +200,7 @@ header {
 	font-family: source-sans-pro, sans-serif;
 	font-style: normal;
 	font-weight: 200;
-	color: rgba(58,77,129,1.00);
+	color: #3a4d81;
 	white-space: pre-wrap;
 }
 /* Buy button for products in catalog */
