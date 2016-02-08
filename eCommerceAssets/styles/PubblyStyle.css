@@ -11,21 +11,6 @@ header {
 	font-style: normal;
 	font-weight: 400;
 }
-table {
-  border-collapse: separate;
-  border-spacing: 50px 0;
-  font-family: 'Montserrat', sans-serif;
-	color: rgba(227,99,36,1.00);
-	font-size: 16px;
-	font-style: normal;
-	font-weight: 400;
-}
-
-td {
-  padding: 10px 0;
-}
-
-
 /* Logo placeholder*/
 #logo {
 	float: left;
@@ -48,7 +33,7 @@ td {
 /* Links in header */
 #headerLinks a {
 	text-decoration: none;
-	color: rgba(146,146,146,1.00);
+	color: rgba(136,103,172,1.00);
 	padding-left: 66px;
 	font-size: 14px;
 }
@@ -68,55 +53,124 @@ td {
 	overflow: auto;
 	padding-top: 29px;
 }
-/* Sidebar */
-#content .sidebar {
-	font-family: 'Montserrat', sans-serif;
-	color: rgba(255,123,0,1.00);
-	float: left;
-	width: 20%;
-	padding-left: 3%;
-	padding-right: 3%;
-	text-align: center;
-	background-color: rgba(246,246,246,1.00);
-	padding-top: 36px;
-	height: 784px;
-}
 /* main content of the site */
 #content .mainContent {
 	float: left;
 	width: 100%;
 	text-align: center;
 }
-/*menubar's properties for menus in sidebar */
-#content .sidebar #menubar {
-	text-align: left;
-	color: rgba(146,146,146,1.00);
-	position: relative;
-	left: 0%;
+#newbutton {
+	width: 250px;
+	height:20px;
+	font-family: 'Montserrat', sans-serif;
+	background-color:rgba(90,172,197,1.00);
+	color: #FFFFFF;
+	float:left;
+	font-size: 20px;
+	padding:10px;
+	text-align:center;
+	letter-spacing:1px;
+	border-radius: 5px
 }
-/* Search field in sidebar */
-#content .sidebar #search {
-	width: 100%;
-	border-radius: 0px;
-	height: 42px;
-	text-align: center;
-	color: rgba(208,207,207,1.00);
-	font-size: 14px;
-	;
+#recommendedbutton {
+	width:250px;
+	height:20px;
+	font-family: 'Montserrat', sans-serif;
+	background-color:rgba(90,172,197,1.00);
+	color: #FFFFFF;
+	float:left;
+	font-size: 20px;
+	padding:10px;
+	margin-left:10px;
+	text-align:center;
+	letter-spacing:1px;
+	border-radius: 5px
+}
+#mybooksbutton {
+	width:250px;
+	height:20px;
+	font-family: 'Montserrat', sans-serif;
+	background-color:rgba(90,172,197,1.00);
+	color: #FFFFFF;
+	float:left;
+	padding:10px;
+	font-size: 20px;
+	text-align:center;
+	margin-left:10px;
+	letter-spacing:1px;
+	border-radius: 5px
+}
+ #search {
+	width: 250px;
+	font-family: 'Montserrat', sans-serif;
+	float:right;
+	background-color:rgba(90,172,197,1.00);
+	height: 20px;
+	color: #FFFFFF;
+	font-size: 20px;
+	text-align:center;
 	margin-bottom: 21px;
+	padding:10px;
+	letter-spacing:1px;
+	text-transform:uppercase;
+	border-radius: 5px;
 }
+
+.purpledot {
+	width:15px;
+	height:15px;
+	border-radius:50px;
+	float:left;
+	background-color:#8867ac;
+	margin-left:67px;
+}
+
+.darkbluedot {
+	width:15px;
+	height:15px;
+	border-radius:50px;
+	float:left;
+	margin-left:6px;
+	background-color:#3a4d81;
+
+}
+.orangedot {
+	width:15px;
+	height:15px;
+	border-radius:50px;
+	float:left;
+	margin-left:6px;
+	background-color:#e36324;
+}
+.reddot {
+	width:15px;
+	height:15px;
+	border-radius:50px;
+	float:left;
+	margin-left:6px;
+	background-color:#b3252a;
+}
+.lightbluedot {
+	width:15px;
+	height:15px;
+	border-radius:50px;
+	float:left;
+	margin-left:6px;
+	background-color:#5aacc5;
+}
+.greendot {
+	width:15px;
+	height:15px;
+	border-radius:50px;
+	float:left;
+	margin-left:6px;
+	background-color:#91bd49;
+}
+
 /* Whole page content */
 #mainWrapper {
 	width: 80%;
 	padding-left: 10%;
-}
-/*menu elements */
-.menu ul li {
-	list-style-type: none;
-	font-size: x-large;
-	position: relative;
-	left: -35px;
-	padding-top: 12px;
 }
 /* Product rows for catalog */
 #content .mainContent .productRow {
@@ -133,10 +187,10 @@ td {
 /* Prices of a products in catalog */
 .productRow .productInfo .price {
 	font-family: 'Montserrat', sans-serif;
-	color: rgba(146,146,146,1.00);
+	color: rgba(136,103,172,1.00);
 	font-size: 22px;
 	position: relative;
-	top: -20px;
+	top: -18px;
 }
 /* Content holder for products in catalog*/
 .productRow .productInfo .productContent {
@@ -146,7 +200,7 @@ td {
 	font-family: source-sans-pro, sans-serif;
 	font-style: normal;
 	font-weight: 200;
-	color: rgba(146,146,146,1.00);
+	color: #3a4d81;
 	white-space: pre-wrap;
 }
 /* Buy button for products in catalog */
@@ -154,7 +208,7 @@ td {
 	position: relative;
 	top: -48px;
 	width: 84%;
-	background-color: rgba(208,207,207,1.00);
+	background-color: rgba(145,189,73,1.00);
 	height: 35px;
 	color: rgba(255,255,255,1.00);
 	border-style: none;
@@ -197,27 +251,7 @@ footer div a {
 .productInfo div img {
 	width: 100%;
 }
-/*Links in sidebar */
-.sidebar #menubar .menu ul li a {
-	color: rgba(146,146,146,1.00);
-	text-decoration: none;
-}
-.sidebar #menubar .menu ul li a:hover {
-	color: rgba(107,97,97,1.00);
-	text-decoration: none;
-}
-/* Menu headings in sidebar */
-#menubar .menu h2 {
-	font-size: 14px;
-}
-/*Links under menus in sidebar */
-#menubar .menu ul li a {
-	font-size: 14px;
-}
-/* Menus in sidebar */
-.sidebar #menubar .menu {
-	margin-bottom: 29px;
-}
+
 /* Container for links in footer */
 footer .footerlinks {
 	margin-top: -15px;
@@ -229,19 +263,7 @@ footer .footerlinks {
 #content .sidebar #search {
 	display: none;
 }
-/* sidebar */
-#content .sidebar {
-	float: none;
-	width: 100%;
-	height: auto;
-	overflow: auto;
-	padding-left: 12%;
-	padding-top: 0px;
-}
-/* horizontal separators in sidebar */
-#content .sidebar hr {
-	display: none;
-}
+
 /*The sidebar and maincontent of page */
 #content {
 	position: relative;
@@ -249,41 +271,9 @@ footer .footerlinks {
 	width: 100%;
 	overflow: hidden;
 }
-/*menu headings in sidebar */
-#menubar .menu h2 {
-	display: inline;
-	font-size: medium;
-	padding-right: 6%;
-}
-/* Unordered List of links */
-#menubar .menu ul {
-	display: inline;
-}
-/*list elements */
-#menubar .menu ul li {
-	display: inline;
-	font-size: medium;
-	padding-left: 0%;
-	padding-right: 3%;
-}
 /*The link to be hidden in tablet view */
 .sidebar #menubar .menu ul .notimp {
 	display: none;
-}
-/* menus in sidebar */
-.sidebar #menubar .menu {
-	width: 100%;
-	text-align: center;
-	position: relative;
-	top: 16px;
-}
-/*menubar in sidebar */
-#content .sidebar #menubar {
-	position: relative;
-	left: -7%;
-	overflow: hidden;
-	width: 95%;
-	padding-top: 0px;
 }
 /* offer banners content */
 #mainWrapper #offer p {
@@ -350,7 +340,6 @@ footer .footerlinks p {
 	display: inline;
 }
 }
-
 /*media query for small screen devices */
 @media screen and (max-width:480px) {
 /*Container for links in header */
@@ -382,11 +371,6 @@ header #headerLinks a {
 	left: -8%;
 	text-align: center;
 }
-/*Menu headings in sidebar */
-#menubar .menu h2 {
-	width: 100%;
-	display: block;
-}
 /* Each product in catalog view */
 .mainContent .productRow .productInfo {
 	width: 100%;
@@ -402,11 +386,6 @@ header #headerLinks a {
 	text-align: justify;
 	padding-bottom: 16px;
 	overflow: auto;
-}
-/* Unordered list for menu elements */
-.menu ul {
-	position: relative;
-	padding-left: 24%;
 }
 /* Container for links in footer */
 #mainWrapper footer .footerlinks {
