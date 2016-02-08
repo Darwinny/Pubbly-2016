@@ -29,7 +29,16 @@
     to alter the index. This is an attempt to keep me (jason) from every having to
     alter raw html.
     -->
-    <script src="js/chainLoader.js"></script>
+   <!-- <script src="js/chainLoader.js"></script> -->
+
+    <!--
+    But wait, there's problems! Turns out chrome can't load or debug js scripts loaded
+    on the fly. Or maybe it can, but I haven't figured out workspaces yet For now, I'll
+     set script tags here for debugging, and hopefully remember to clear
+    them on reupload. Or until I can get a better system.
+    TODO: Figure out better system.
+    -->
+    <script src="js/productPopulate.js"></script>
 </head>
 <body>
 <div id="mainWrapper">
@@ -47,46 +56,48 @@
 
         <p>This section will contain a moving image of some kind.</p>
     </section>
-
-    <table>
-        <tr>
-            <td>New</td>
-            <td>Recommended</td>
-            <td>My Books</td>
-            <td>These subjects will be spaced out better and be part of a bar . . . to com</td>
-            <td>Search box here</td>
-        </tr>
-    </table>
+      <div id="newbutton">NEW</div>
+        <div id="recommendedbutton">RECOMMENDED</div>
+        <div id="mybooksbutton">MY BOOKS</div>
+        <div><input type="text" id="search" value="search"></div>
     <div id="content">
         <!-- Sidebar HTML removed, can be found at
         reusables/SideBarWithSearchBoxAndTemplateMenulists.html
         Removed to make room for 4th colum of books.
         -->
-        <section class="mainContent">
+                <section class="mainContent">
             <div class="productRow"><!-- Each product row contains info of 3 elements -->
                 <article class="productInfo"><!-- Each individual product description -->
-                    <div><img alt="sample" src="homepageAssets/pigswithdots.png"></div>
+                    <div><img alt="sample" src="homepageAssets/cvr1509fourthpig.png"></div>
+                    <div class="purpledot"></div><div class="darkbluedot"></div><div class="orangedot">
+                    </div><div class="reddot"></div><div class="lightbluedot"></div><div class="greendot"></div><br>
                     <p class="price">Free!</p>
 
                     <p class="productContent">The Fourth Little Pig </p>
                     <input type="button" name="button" value="Buy" class="buyButton">
                 </article>
                 <article class="productInfo"><!-- Each individual product description -->
-                    <div><img alt="sample" src="homepageAssets/pigswithdots.png"></div>
-                    <p class="price">Free!</p>
-
-                    <p class="productContent">The Fourth Little Pig </p>
-                    <input type="button" name="button" value="Buy" class="buyButton">
-                </article>
-                <article class="productInfo"><!-- Each individual product description -->
-                    <div><img alt="sample" src="homepageAssets/Dragonwithdots.png"></div>
+                    <div><img alt="sample" src="homepageAssets/cvr910hellokitty.png"></div>
+                    <div class="purpledot"></div><div class="darkbluedot"></div><div class="orangedot">
+                    </div><div class="reddot"></div><div class="lightbluedot"></div><div class="greendot"></div><br>
                     <p class="price">$4.99</p>
 
-                    <p class="productContent">note add dots here not with pic</p>
+                    <p class="productContent">Hello Kitty and Me: Best Friends </p>
+                    <input type="button" name="button" value="Buy" class="buyButton">
+                </article>
+                <article class="productInfo"><!-- Each individual product description -->
+                    <div><img alt="sample" src="homepageAssets/cvr251ddragonland.png"></div>
+                    <div class="purpledot"></div><div class="darkbluedot"></div><div class="orangedot">
+                    </div><div class="reddot"></div><div class="lightbluedot"></div><div class="greendot"></div><br>
+                    <p class="price">$4.99</p>
+
+                    <p class="productContent">Once Upon a Time in Dragon Land</p>
                     <input type="button" name="button" value="Buy" class="buyButton">
                 </article>
                 <article class="productInfo"> <!-- Each individual product description -->
-                    <div><img alt="sample" src="homepageAssets/jeremyfisherdots.png"></div>
+                    <div><img alt="sample" src="homepageAssets/cvrJeremyFisher.png"></div>
+                    <div class="purpledot"></div><div class="darkbluedot"></div><div class="orangedot">
+                    </div><div class="reddot"></div><div class="lightbluedot"></div><div class="greendot"></div><br>
                     <p class="price">$4.99</p>
 
                     <p class="productContent">The Tale of Jeremy Fisher</p>
@@ -96,28 +107,36 @@
             <div class="productRow">
                 <!-- Each product row contains info of 3 elements -->
                 <article class="productInfo"> <!-- Each individual product description -->
-                    <div><img alt="sample" src="homepageAssets/stelladots.png"></div>
+                    <div><img alt="sample" src="homepageAssets/cvr962stella.png"></div>
+                    <div class="purpledot"></div><div class="darkbluedot"></div><div class="orangedot">
+                    </div><div class="reddot"></div><div class="lightbluedot"></div><div class="greendot"></div><br>
                     <p class="price">$4.99</p>
 
                     <p class="productContent">Stellaluna</p>
                     <input type="button" name="button" value="Buy" class="buyButton">
                 </article>
                 <article class="productInfo"> <!-- Each individual product description -->
-                    <div><img alt="sample" src="homepageAssets/stelladots.png"></div>
+                    <div><img alt="sample" src="homepageAssets/cvr959rumpel.png"></div>
+                    <div class="purpledot"></div><div class="darkbluedot"></div><div class="orangedot">
+                    </div><div class="reddot"></div><div class="lightbluedot"></div><div class="greendot"></div><br>
                     <p class="price">$4.99</p>
 
-                    <p class="productContent">Stellaluna</p>
+                    <p class="productContent">Rumpelstiltskin</p>
                     <input type="button" name="button" value="Buy" class="buyButton">
                 </article>
                 <article class="productInfo"> <!-- Each individual product description -->
-                    <div><img alt="sample" src="homepageAssets/frogandflydots.png"></div>
+                    <div><img alt="sample" src="homepageAssets/cvr1199frogfly.png"></div>
+                    <div class="purpledot"></div><div class="darkbluedot"></div><div class="orangedot">
+                    </div><div class="reddot"></div><div class="lightbluedot"></div><div class="greendot"></div><br>
                     <p class="price">$4.99</p>
 
                     <p class="productContent">Frog and Fly</p>
                     <input type="button" name="button" value="Buy" class="buyButton">
                 </article>
                 <article class="productInfo"><!-- Each individual product description -->
-                    <div><img alt="sample" src="homepageAssets/velvedots.png"></div>
+                    <div><img alt="sample" src="homepageAssets/cvr1091velveteen.png"></div>
+                    <div class="purpledot"></div><div class="darkbluedot"></div><div class="orangedot">
+                    </div><div class="reddot"></div><div class="lightbluedot"></div><div class="greendot"></div><br>
                     <p class="price">$4.99</p>
 
                     <p class="productContent">The Velveteen Rabbit</p>
@@ -126,28 +145,36 @@
             </div>
             <div class="productRow">
                 <article class="productInfo"> <!-- Each individual product description -->
-                    <div><img alt="sample" src="homepageAssets/bluetruckdots.png"></div>
+                    <div><img alt="sample" src="homepageAssets/cvr994bluetruck.png"></div>
+                    <div class="purpledot"></div><div class="darkbluedot"></div><div class="orangedot">
+                    </div><div class="reddot"></div><div class="lightbluedot"></div><div class="greendot"></div><br>
                     <p class="price">$4.99</p>
 
                     <p class="productContent">The Little Blue Truck</p>
                     <input type="button" name="button" value="Buy" class="buyButton">
                 </article>
                 <article class="productInfo"> <!-- Each individual product description -->
-                    <div><img alt="sample" src="homepageAssets/bluetruckdots.png"></div>
+                    <div><img alt="sample" src="homepageAssets/cvr1217justoneyou.png"></div>
+                    <div class="purpledot"></div><div class="darkbluedot"></div><div class="orangedot">
+                    </div><div class="reddot"></div><div class="lightbluedot"></div><div class="greendot"></div><br>
                     <p class="price">$4.99</p>
 
-                    <p class="productContent">The Little Blue Truck</p>
+                    <p class="productContent">Sesame Street: Just One You!</p>
                     <input type="button" name="button" value="Buy" class="buyButton">
                 </article>
                 <article class="productInfo"><!-- Each individual product description -->
-                    <div><img alt="sample" src="homepageAssets/greeneggsdots.png"></div>
+                    <div><img alt="sample" src="homepageAssets/cvr911greeneggs.png"></div>
+                    <div class="purpledot"></div><div class="darkbluedot"></div><div class="orangedot">
+                    </div><div class="reddot"></div><div class="lightbluedot"></div><div class="greendot"></div><br>
                     <p class="price">$4.99</p>
 
                     <p class="productContent">Green Eggs and Ham</p>
                     <input type="button" name="button" value="Buy" class="buyButton">
                 </article>
                 <article class="productInfo"><!-- Each individual product description -->
-                    <div><img alt="sample" src="homepageAssets/whendots.png"></div>
+                    <div><img alt="sample" src="homepageAssets/cvr1145when.png"></div>
+                    <div class="purpledot"></div><div class="darkbluedot"></div><div class="orangedot">
+                    </div><div class="reddot"></div><div class="lightbluedot"></div><div class="greendot"></div><br>
                     <p class="price">$4.99</p>
 
                     <p class="productContent">When?</p>
