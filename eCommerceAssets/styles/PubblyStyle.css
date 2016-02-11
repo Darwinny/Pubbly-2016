@@ -54,22 +54,25 @@ header {
 
 }
 #splash {
-	clear:both
+	clear:both;
+	overflow: auto;
+
 }
 .balls  {
-	float:left;
-	padding-left: 50px;
-	padding-bottom:30px;
-	width:12%;
-	margin:0;
-	
+	float: left;
+	padding-left: 1.5%;
+	padding-right: 1%;
+	padding-bottom: 20px;
+	width: 14%;
 }
 .button1 {
+	position: relative;
 	background-image: url(../../homepageAssets/purplep.svg);
-    pattern:one;
-	width:160px;
-	height:160px;
+	background-repeat: no-repeat;
+	background-size:100% 100%;
 	text-decoration:none;
+	width: 84%;
+	height: 164px;
 	cursor:pointer;
 	background-color:white;
 	border:none;
@@ -78,11 +81,13 @@ header {
 	background-image: url(../../homepageAssets/bookpur.svg);
 }
 .button2 {
+	position: relative;
 	background-image: url(../../homepageAssets/blueu.svg);
-    pattern:one;
-	width:160px;
-	height:160px;
+    background-repeat: no-repeat;
+	background-size:100% 100%;
 	text-decoration:none;
+	width: 84%;
+	height: 164px;
 	cursor:pointer;
 	background-color:white;
 	border:none;
@@ -91,10 +96,12 @@ header {
 	background-image: url(../../homepageAssets/audioblue.svg);
 }
 .button3 {
-	background-image: url(../../homepageAssets/orangeb.svg);
-    pattern:one;
-	width:160px;
-	height:160px;
+	position: relative;
+    background-image: url(../../homepageAssets/orangeb.svg);
+    background-repeat: no-repeat;
+	background-size:100% 100%;
+	width: 84%;
+	height: 164px;
 	text-decoration:none;
 	cursor:pointer;
 	background-color:white;
@@ -104,10 +111,12 @@ header {
 	background-image: url(../../homepageAssets/textorange.svg);
 }
 .button4 {
+	position: relative;
 	background-image: url(../../homepageAssets/redb.svg);
-    pattern:one;
-	width:160px;
-	height:160px;
+    background-repeat: no-repeat;
+	background-size:100% 100%;
+	width: 84%;
+	height: 164px;
 	text-decoration:none;
 	cursor:pointer;
 	background-color:white;
@@ -117,10 +126,12 @@ header {
 	background-image: url(../../homepageAssets/animred.svg);
 }
 .button5 {
-	background-image: url(../../homepageAssets/bluel.svg);
-    pattern:one;
-	width:160px;
-	height:160px;
+	position: relative;
+    background-image: url(../../homepageAssets/bluel.svg);
+    background-repeat: no-repeat;
+	background-size:100% 100%;
+	width: 84%;
+	height: 164px;
 	text-decoration:none;
 	cursor:pointer;
 	background-color:white;
@@ -130,10 +141,12 @@ header {
 	background-image: url(../../homepageAssets/quizblue.svg);
 }
 .button6 {
-	background-image: url(../../homepageAssets/greeny.svg);
-    pattern:one;
-	width:160px;
-	height:160px;
+	position: relative;
+    background-image: url(../../homepageAssets/greeny.svg);
+    background-repeat: no-repeat;
+	background-size:100% 100%;
+	width: 84%;
+	height: 164px;
 	text-decoration:none;
 	cursor:pointer;
 	background-color:white;
@@ -154,26 +167,35 @@ header {
 	width: 100%;
 	text-align: center;
 }
+#finder {
+	float: left;
+	padding-left: 1.5%;
+	padding-right: 1.5%;
+	padding-bottom: 1%;
+	width: 25%;
+}
 #plussign {
 	width:10%;
+	min-height:20px;
 	padding-right: 10px;
 }
 #starsign {
 	width:10%;
+	min-height:20px;
 	padding-right: 10px;
 }
 #heartsign {
 	width:10%;
+	min-height:20px;
 	padding-right: 10px;
 }
 #newbutton {
-	width: 250px;
+    width: 84%;
 	height:30px;
 	font-family: 'Montserrat', sans-serif;
 	background-color:rgba(90,172,197,1.00);
 	color: #FFFFFF;
-	float:left;
-	font-size: 20px;
+	font-size: 1.3em;
 	padding:10px;
 	text-align:center;
 	letter-spacing:1px;
@@ -181,13 +203,12 @@ header {
 	cursor:pointer;
 }
 #recommendedbutton {
-	width:250px;
+    width: 84%;
 	height:30px;
 	font-family: 'Montserrat', sans-serif;
 	background-color:rgba(90,172,197,1.00);
 	color: #FFFFFF;
-	float:left;
-	font-size: 20px;
+	font-size: 1.3em;
 	padding:10px;
 	margin-left:10px;
 	text-align:center;
@@ -196,14 +217,13 @@ header {
 	cursor:pointer;
 }
 #mybooksbutton {
-	width:250px;
+	width: 84%;
 	height:30px;
 	font-family: 'Montserrat', sans-serif;
 	background-color:rgba(90,172,197,1.00);
 	color: #FFFFFF;
-	float:left;
 	padding:10px;
-	font-size: 20px;
+	font-size: 1.3em;
 	text-align:center;
 	margin-left:10px;
 	letter-spacing:1px;
@@ -211,16 +231,15 @@ header {
 	cursor:pointer;
 }
  #search {
-	width: 410px;
+	width: 84%;
 	font-family: 'Montserrat', sans-serif;
-	float:right;
 	background-color:rgba(90,172,197,1.00);
 	background-image:url(../../homepageAssets/magnifi.svg);
 	background-repeat:no-repeat;
 	background-origin: content-box;
 	height: 27px;
 	color: #FFFFFF;
-	font-size: 20px;
+	font-size: 1.3em;
 	text-align:right;
 	margin-bottom: 21px;
 	padding:10px;
