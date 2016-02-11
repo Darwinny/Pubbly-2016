@@ -6,38 +6,20 @@ a:hover {
 /*header*/
 header {
 	font-family: 'Montserrat', sans-serif;
-	color: rgba(227,99,36,1.00);
-	font-size: 16px;
-	font-style: normal;
-	font-weight: 400;
-	padding-left:40px;
+}
 
-}
-/* Logo placeholder*/
-#logo {
-	float: left;
-	padding-top: 10px;
-	padding-bottom: 2px;
-	width: 139px;
-	text-align: center;
-	color: rgba(255,255,255,1.00);
-	background-color: rgba(255,255,255,1.00);
-}
-/* div for Links in header */
 #headerLinks {
 	float: right;
-	width: calc( 100% - 139px );
-	text-align: right;
-	padding-bottom: 15px;
-	padding-top:10px;
+	padding-bottom: 1%;
+	padding-top:1%;
+	font-family: 'Montserrat', sans-serif;
 	background-color: rgba(255,255,255,1.00);
 }
 /* Links in header */
 #headerLinks a {
 	text-decoration: none;
 	color: rgba(136,103,172,1.00);
-	padding-left: 88px;
-	font-size: 14px;
+	font-size: 1em;
 }
 /* Offer text banner*/
 #offer {
@@ -45,9 +27,9 @@ header {
 	clear: both;
 	background-color: #3a4d81;
 	color: white;
-	padding-left: 40px;
-	padding-top:10px;
-	padding-bottom: 10px;
+	padding-left: 2%;
+	padding-top:1%;
+	padding-bottom: 1%;
 	border-radius: 5px;
 	text-align:left;
 	letter-spacing: 1px;
@@ -62,7 +44,7 @@ header {
 	float: left;
 	padding-left: 1.5%;
 	padding-right: 1%;
-	padding-bottom: 20px;
+	padding-bottom: 1%;
 	width: 14%;
 }
 .button1 {
@@ -159,7 +141,7 @@ header {
 #content {
 	clear: both;
 	overflow: auto;
-	padding-top: 29px;
+	padding-top: 2%;
 }
 /* main content of the site */
 #content .mainContent {
@@ -167,86 +149,7 @@ header {
 	width: 100%;
 	text-align: center;
 }
-#finder {
-	float: left;
-	padding-left: 1.5%;
-	padding-right: 1.5%;
-	padding-bottom: 1%;
-	width: 25%;
-}
-#plussign {
-	width:10%;
-	min-height:20px;
-	padding-right: 10px;
-}
-#starsign {
-	width:10%;
-	min-height:20px;
-	padding-right: 10px;
-}
-#heartsign {
-	width:10%;
-	min-height:20px;
-	padding-right: 10px;
-}
-#newbutton {
-    width: 84%;
-	height:30px;
-	font-family: 'Montserrat', sans-serif;
-	background-color:rgba(90,172,197,1.00);
-	color: #FFFFFF;
-	font-size: 1.3em;
-	padding:10px;
-	text-align:center;
-	letter-spacing:1px;
-	border-radius: 5px;
-	cursor:pointer;
-}
-#recommendedbutton {
-    width: 84%;
-	height:30px;
-	font-family: 'Montserrat', sans-serif;
-	background-color:rgba(90,172,197,1.00);
-	color: #FFFFFF;
-	font-size: 1.3em;
-	padding:10px;
-	margin-left:10px;
-	text-align:center;
-	letter-spacing:1px;
-	border-radius: 5px;
-	cursor:pointer;
-}
-#mybooksbutton {
-	width: 84%;
-	height:30px;
-	font-family: 'Montserrat', sans-serif;
-	background-color:rgba(90,172,197,1.00);
-	color: #FFFFFF;
-	padding:10px;
-	font-size: 1.3em;
-	text-align:center;
-	margin-left:10px;
-	letter-spacing:1px;
-	border-radius: 5px;
-	cursor:pointer;
-}
- #search {
-	width: 84%;
-	font-family: 'Montserrat', sans-serif;
-	background-color:rgba(90,172,197,1.00);
-	background-image:url(../../homepageAssets/magnifi.svg);
-	background-repeat:no-repeat;
-	background-origin: content-box;
-	height: 27px;
-	color: #FFFFFF;
-	font-size: 1.3em;
-	text-align:right;
-	margin-bottom: 21px;
-	padding:10px;
-	letter-spacing:1px;
-	text-transform:uppercase;
-	border-radius: 5px;
-}
+
 
 .purpledot {
 	width:15px;
@@ -254,7 +157,7 @@ header {
 	border-radius:50px;
 	float:left;
 	background-color:#8867ac;
-	margin-left:67px;
+	margin-left:68px;
 }
 
 .darkbluedot {
@@ -344,9 +247,13 @@ header {
 	height: 35px;
 	color: rgba(255,255,255,1.00);
 	border-style: none;
-	font-size: 14px;
+	font-size: 1em;
 	text-transform: uppercase;
 	margin-top: 8px;
+	border-radius:5px;
+	font-family: 'Montserrat', sans-serif;
+	letter-spacing:1px;
+
 }
 /* footer */
 #mainWrapper footer {

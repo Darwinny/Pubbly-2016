@@ -5,12 +5,28 @@
     <title>Pubbly</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="eCommerceAssets/styles/PubblyStyle.css" rel="stylesheet" type="text/css">
+    <style>
+        @media (max-width: 1400px) {
+            #mainWrapper {
+                width:96%;
+                padding-left:2%;
+            }
+        }
+        @media (min-width:800) {
+            #content {
+                padding-top: 0px;
+            }
+        }
+    </style>
+
+    <link href="css/navMenuButtonsPhones.css" rel="stylesheet" media="(max-width: 799px)" type="text/css">
+    <link href="css/navMenuButtons800.css" rel="stylesheet" media="(min-width: 800px) and (max-width:1399px)" type="text/css">
+    <link href="css/navMenuButtons1400.css" rel="stylesheet" media="(min-width: 1400px)" type="text/css">
     <!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
     <script>var __adobewebfontsappname__ = "dreamweaver"</script>
     <!-- Don't know what this is, ask susan -->
     <script src="http://use.edgefonts.net/montserrat:n4:default;source-sans-pro:n2:default.js"
             type="text/javascript"></script>
-           
 
     <!--
     Why not load these with chainLoader?
@@ -25,13 +41,30 @@
         Parse.initialize("qJpO3RDqtYMsnhfuWkz480z4igc8JvHOfgwTeels", "u3ym3rSKBXH5cSePMYB9G6H4UP1EiM6OReFkZAMy");
     </script>
 
+    <script>
+        // Menu toggle on small displays
+        $(document).ready(function() {
+            $("#navMenuCont").click(function() {
+                if ($(this).attr("status") == "open") {
+                    $(this).addClass("closed");
+                    $(this).removeClass("open");
+                    $(this).attr("status","closed");
+                }   else    {
+                    $(this).addClass("open");
+                    $(this).removeClass("closed");
+                    $(this).attr("status","open");
+                }
+            })
+        })
+    </script>
+
     <!--
     Instead of attaching new JS files to index, I'll add a single chainLoader JS
     file. From there I can manually add and remove additional js files without having
     to alter the index. This is an attempt to keep me (jason) from every having to
     alter raw html.
     -->
-   <!-- <script src="js/chainLoader.js"></script> -->
+    <!-- <script src="js/chainLoader.js"></script> -->
 
     <!--
     But wait, there's problems! Turns out chrome can't load or debug js scripts loaded
@@ -41,44 +74,42 @@
     TODO: Figure out better system.
     -->
     <script src="js/productPopulate.js"></script>
-    
+
 
 </head>
 <body>
 <div id="mainWrapper">
     <header>
-        <!-- This is the header content. It contains Logo and links -->
-      
         <div id="headerLinks"><a href="#" title="Login/Register">Sign In / Register</a></div>
     </header>
     <section id="splash">
-   
-    <div class="balls">
-    
-    <button class="button1"></button>
-    
-     
-</div>
-    <div class="balls">
-    <button class="button2"></button>
-</div>
-    <div class="balls" >
-        <button class="button3"></button>
 
-</div>
-    <div class="balls">
-    
-        <button class="button4"></button>
+        <div class="balls">
 
-</div>
-    <div class="balls">
-         <button class="button5"></button>
+            <button class="button1"></button>
 
-</div>
-    <div class="balls">
-         <button class="button6"></button>
 
-</div>
+        </div>
+        <div class="balls">
+            <button class="button2"></button>
+        </div>
+        <div class="balls">
+            <button class="button3"></button>
+
+        </div>
+        <div class="balls">
+
+            <button class="button4"></button>
+
+        </div>
+        <div class="balls">
+            <button class="button5"></button>
+
+        </div>
+        <div class="balls">
+            <button class="button6"></button>
+
+        </div>
     </section>
     <section id="offer">
         <!-- The offer section displays a banner text for promotions -->
@@ -86,26 +117,44 @@
 
         <p>The dots tell you what features are included in each book.</p>
     </section>
-    <div id="finder">
-      <div id="newbutton">
-      <img id="plussign" src="homepageAssets/add.svg">NEW</div>
-        <div id="recommendedbutton">
-        <img id="starsign" src="homepageAssets/star.svg">
-        RECOMMENDED</div>
-        <div id="mybooksbutton"><img id="heartsign" src="homepageAssets/heart.svg">MY BOOKS</div>
-        <div><input type="text" id="search" value="search"></div>
+
+    <div id="navMenuCont" class="closed" status="closed">
+        <p id="menuLabel">Menu</p>
+        <div id="newbutton" class="navMenuButton">
+            <img id="plussign" src="homepageAssets/add.svg">
+            <span>NEW</span>
         </div>
+        <div id="recommendedbutton" class="navMenuButton">
+            <img id="starsign" src="homepageAssets/star.svg">
+            <span>RECOMMENDED</span>
+        </div>
+        <div id="mybooksbutton" class="navMenuButton">
+            <img id="heartsign" src="homepageAssets/heart.svg">
+            <span>MY BOOKS</span>
+        </div>
+        <div id="booksearchbutton" class="navMenuButton">
+            <img id="heartsign" src="homepageAssets/magnifi.svg">
+            <input type="text" id="search" value="search">
+        </div>
+    </div>
     <div id="content">
         <!-- Sidebar HTML removed, can be found at
         reusables/SideBarWithSearchBoxAndTemplateMenulists.html
         Removed to make room for 4th colum of books.
         -->
-                <section class="mainContent">
+        <section class="mainContent">
             <div class="productRow"><!-- Each product row contains info of 3 elements -->
                 <article class="productInfo"><!-- Each individual product description -->
                     <div><img alt="sample" src="homepageAssets/cvr1509fourthpig.png"></div>
-                    <div class="purpledot"></div><div class="darkbluedot"></div><div class="orangedot">
-                    </div><div class="reddot"></div><div class="lightbluedot"></div><div class="greendot"></div><br>
+                    <div class="purpledot"></div>
+                    <div class="darkbluedot"></div>
+                    <div class="orangedot">
+                    </div>
+                    <div class="reddot"></div>
+                    <div class="lightbluedot"></div>
+                    <div class="greendot"></div>
+                    <br>
+
                     <p class="price">Free!</p>
 
                     <p class="productContent">The Fourth Little Pig </p>
@@ -113,8 +162,15 @@
                 </article>
                 <article class="productInfo"><!-- Each individual product description -->
                     <div><img alt="sample" src="homepageAssets/cvr910hellokitty.png"></div>
-                    <div class="purpledot"></div><div class="darkbluedot"></div><div class="orangedot">
-                    </div><div class="reddot"></div><div class="lightbluedot"></div><div class="greendot"></div><br>
+                    <div class="purpledot"></div>
+                    <div class="darkbluedot"></div>
+                    <div class="orangedot">
+                    </div>
+                    <div class="reddot"></div>
+                    <div class="lightbluedot"></div>
+                    <div class="greendot"></div>
+                    <br>
+
                     <p class="price">$4.99</p>
 
                     <p class="productContent">Hello Kitty and Me: Best Friends </p>
@@ -122,8 +178,15 @@
                 </article>
                 <article class="productInfo"><!-- Each individual product description -->
                     <div><img alt="sample" src="homepageAssets/cvr251ddragonland.png"></div>
-                    <div class="purpledot"></div><div class="darkbluedot"></div><div class="orangedot">
-                    </div><div class="reddot"></div><div class="lightbluedot"></div><div class="greendot"></div><br>
+                    <div class="purpledot"></div>
+                    <div class="darkbluedot"></div>
+                    <div class="orangedot">
+                    </div>
+                    <div class="reddot"></div>
+                    <div class="lightbluedot"></div>
+                    <div class="greendot"></div>
+                    <br>
+
                     <p class="price">$4.99</p>
 
                     <p class="productContent">Once Upon a Time in Dragon Land</p>
@@ -131,8 +194,15 @@
                 </article>
                 <article class="productInfo"> <!-- Each individual product description -->
                     <div><img alt="sample" src="homepageAssets/cvrJeremyFisher.png"></div>
-                    <div class="purpledot"></div><div class="darkbluedot"></div><div class="orangedot">
-                    </div><div class="reddot"></div><div class="lightbluedot"></div><div class="greendot"></div><br>
+                    <div class="purpledot"></div>
+                    <div class="darkbluedot"></div>
+                    <div class="orangedot">
+                    </div>
+                    <div class="reddot"></div>
+                    <div class="lightbluedot"></div>
+                    <div class="greendot"></div>
+                    <br>
+
                     <p class="price">$4.99</p>
 
                     <p class="productContent">The Tale of Jeremy Fisher</p>
@@ -143,8 +213,15 @@
                 <!-- Each product row contains info of 3 elements -->
                 <article class="productInfo"> <!-- Each individual product description -->
                     <div><img alt="sample" src="homepageAssets/cvr962stella.png"></div>
-                    <div class="purpledot"></div><div class="darkbluedot"></div><div class="orangedot">
-                    </div><div class="reddot"></div><div class="lightbluedot"></div><div class="greendot"></div><br>
+                    <div class="purpledot"></div>
+                    <div class="darkbluedot"></div>
+                    <div class="orangedot">
+                    </div>
+                    <div class="reddot"></div>
+                    <div class="lightbluedot"></div>
+                    <div class="greendot"></div>
+                    <br>
+
                     <p class="price">$4.99</p>
 
                     <p class="productContent">Stellaluna</p>
@@ -152,8 +229,15 @@
                 </article>
                 <article class="productInfo"> <!-- Each individual product description -->
                     <div><img alt="sample" src="homepageAssets/cvr959rumpel.png"></div>
-                    <div class="purpledot"></div><div class="darkbluedot"></div><div class="orangedot">
-                    </div><div class="reddot"></div><div class="lightbluedot"></div><div class="greendot"></div><br>
+                    <div class="purpledot"></div>
+                    <div class="darkbluedot"></div>
+                    <div class="orangedot">
+                    </div>
+                    <div class="reddot"></div>
+                    <div class="lightbluedot"></div>
+                    <div class="greendot"></div>
+                    <br>
+
                     <p class="price">$4.99</p>
 
                     <p class="productContent">Rumpelstiltskin</p>
@@ -161,8 +245,15 @@
                 </article>
                 <article class="productInfo"> <!-- Each individual product description -->
                     <div><img alt="sample" src="homepageAssets/cvr1199frogfly.png"></div>
-                    <div class="purpledot"></div><div class="darkbluedot"></div><div class="orangedot">
-                    </div><div class="reddot"></div><div class="lightbluedot"></div><div class="greendot"></div><br>
+                    <div class="purpledot"></div>
+                    <div class="darkbluedot"></div>
+                    <div class="orangedot">
+                    </div>
+                    <div class="reddot"></div>
+                    <div class="lightbluedot"></div>
+                    <div class="greendot"></div>
+                    <br>
+
                     <p class="price">$4.99</p>
 
                     <p class="productContent">Frog and Fly</p>
@@ -170,8 +261,15 @@
                 </article>
                 <article class="productInfo"><!-- Each individual product description -->
                     <div><img alt="sample" src="homepageAssets/cvr1091velveteen.png"></div>
-                    <div class="purpledot"></div><div class="darkbluedot"></div><div class="orangedot">
-                    </div><div class="reddot"></div><div class="lightbluedot"></div><div class="greendot"></div><br>
+                    <div class="purpledot"></div>
+                    <div class="darkbluedot"></div>
+                    <div class="orangedot">
+                    </div>
+                    <div class="reddot"></div>
+                    <div class="lightbluedot"></div>
+                    <div class="greendot"></div>
+                    <br>
+
                     <p class="price">$4.99</p>
 
                     <p class="productContent">The Velveteen Rabbit</p>
@@ -181,8 +279,15 @@
             <div class="productRow">
                 <article class="productInfo"> <!-- Each individual product description -->
                     <div><img alt="sample" src="homepageAssets/cvr994bluetruck.png"></div>
-                    <div class="purpledot"></div><div class="darkbluedot"></div><div class="orangedot">
-                    </div><div class="reddot"></div><div class="lightbluedot"></div><div class="greendot"></div><br>
+                    <div class="purpledot"></div>
+                    <div class="darkbluedot"></div>
+                    <div class="orangedot">
+                    </div>
+                    <div class="reddot"></div>
+                    <div class="lightbluedot"></div>
+                    <div class="greendot"></div>
+                    <br>
+
                     <p class="price">$4.99</p>
 
                     <p class="productContent">The Little Blue Truck</p>
@@ -190,8 +295,15 @@
                 </article>
                 <article class="productInfo"> <!-- Each individual product description -->
                     <div><img alt="sample" src="homepageAssets/cvr1217justoneyou.png"></div>
-                    <div class="purpledot"></div><div class="darkbluedot"></div><div class="orangedot">
-                    </div><div class="reddot"></div><div class="lightbluedot"></div><div class="greendot"></div><br>
+                    <div class="purpledot"></div>
+                    <div class="darkbluedot"></div>
+                    <div class="orangedot">
+                    </div>
+                    <div class="reddot"></div>
+                    <div class="lightbluedot"></div>
+                    <div class="greendot"></div>
+                    <br>
+
                     <p class="price">$4.99</p>
 
                     <p class="productContent">Sesame Street: Just One You!</p>
@@ -199,8 +311,15 @@
                 </article>
                 <article class="productInfo"><!-- Each individual product description -->
                     <div><img alt="sample" src="homepageAssets/cvr911greeneggs.png"></div>
-                    <div class="purpledot"></div><div class="darkbluedot"></div><div class="orangedot">
-                    </div><div class="reddot"></div><div class="lightbluedot"></div><div class="greendot"></div><br>
+                    <div class="purpledot"></div>
+                    <div class="darkbluedot"></div>
+                    <div class="orangedot">
+                    </div>
+                    <div class="reddot"></div>
+                    <div class="lightbluedot"></div>
+                    <div class="greendot"></div>
+                    <br>
+
                     <p class="price">$4.99</p>
 
                     <p class="productContent">Green Eggs and Ham</p>
@@ -208,8 +327,15 @@
                 </article>
                 <article class="productInfo"><!-- Each individual product description -->
                     <div><img alt="sample" src="homepageAssets/cvr1145when.png"></div>
-                    <div class="purpledot"></div><div class="darkbluedot"></div><div class="orangedot">
-                    </div><div class="reddot"></div><div class="lightbluedot"></div><div class="greendot"></div><br>
+                    <div class="purpledot"></div>
+                    <div class="darkbluedot"></div>
+                    <div class="orangedot">
+                    </div>
+                    <div class="reddot"></div>
+                    <div class="lightbluedot"></div>
+                    <div class="greendot"></div>
+                    <br>
+
                     <p class="price">$4.99</p>
 
                     <p class="productContent">When?</p>
