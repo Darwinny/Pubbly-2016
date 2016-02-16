@@ -1,0 +1,39 @@
+body {
+    margin:0;
+    padding:0;
+    overflow:hidden;
+}
+#register-success-cont {
+    width:100%;
+    position:absolute;
+    top:250px;
+}
+#register-success {
+    display:block;
+    margin:0 auto;
+    height:165px;
+    width:275px;
+    padding:1px 25px 0px 25px;
+    background-color:RGB(20,20,20);
+    border-radius:15px;
+}
+#register-success h1 {
+    color:white;
+    text-align:center;
+    width:100%;
+    margin-top:8px;
+}
+#register-success p {
+    color:white;
+    text-align:center;
+    width:100%;
+}
+#register-success a:visited {
+    color: rgb(182, 123, 211);
+}
+#register-success a {
+    color:white;
+    text-align:center;
+    width:100%;
+    color: rgb(181, 182, 255);
+}

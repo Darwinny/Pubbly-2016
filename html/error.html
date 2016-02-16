@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{curTitle}</title>
+</head>
+<style>
+    h2 {
+        text-align:center;
+        width:100%;
+    }
+    body {
+        background-color:grey;
+        padding:0;
+        margin:0;
+    }
+    #errorMesgCont {
+        border:1px solid black;
+        border-radius:15px;
+        width:350px;
+        padding:25px;
+        margin:0 auto;
+        display:block;
+        background-color:black;
+    }
+    #errorMesgCont > p {
+        color:white;
+    }
+</style>
+<body>
+    <h2>Error</h2>
+    <div id="errorMesgCont">
+        <p>{curMessage}</p>
+    </div>
+</body>
+</html>

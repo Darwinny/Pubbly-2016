@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="parallax p1">
+    <div id="fullscreen">
+        <img id="cloud-backup" src="assets/cloud-snapshot.jpg">
+        <video id="cloud-video" src="assets/video/clouds.mp4" autoplay="" loop=""></video>
+    </div>
+    <link rel="stylesheet" href="css/bg.css">
+</div>
+<div id="registration-cont">
+    <h1>Register with us</h1>
+
+    <form id="registrationForm" action="register()" method="post" name="registration_form">
+
+        <div class="field-cont">
+            <p class="field-desc">Username:</p>
+            <input class="field-act" type="text" name="username" id="username"><br>
+        </div>
+
+        <div class="field-cont">
+            <p class="field-desc">Email:</p>
+            <input class="field-act" type="text" name="email" id="email"><br>
+        </div>
+
+        <div class="field-cont">
+            <p class="field-desc">Password:</p>
+            <input class="field-act" type="password" name="password" id="password"><br>
+        </div>
+
+        <div class="field-cont">
+            <p class="field-desc">Confirm password:</p>
+            <input class="field-act" type="password" name="confirmpwd" id="confirmpwd" onkeydown="if (event.keyCode == 13) document.getElementById('submit-button').click()"><br>
+        </div>
+
+
+        <div class="field-cont">
+            <div class="clearfix"></div>
+            <p id="return-link">Return to the <a href="index.php">login page</a>.</p>
+            <input type="button" value="Register" id="submit-button" onclick="return register(this);">
+        </div>
+    </form>
+    <ul id="requirement-list">
+        <li>Usernames use regular characters only.</li>
+        <li>Emails must be valid.</li>
+        <li>Passwords must be at least 6 characters long.</li>
+        <li><b>Passwords are as secure as you make them!</b></li>
+    </ul>
+
+    <p class="error"></p>
+</div>
+<link rel="stylesheet" href="css/register.css">
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/sha512.js"></script>
+<script>
+    var keytimeout = false
+    function check_pubbly_cred(elem) {
+        if (keytimeout) {
+            window.clearTimeout(keytimeout);
+        }
+        keytimeout = window.setTimeout(function () {
+            console.log("check " + elem);
+            var cont = $(elem).parent();
+            $(cont).find('img').css('display','none');
+            $(cont).find('.server-wait-mark').css('display','block');
+            var server = cont[0].getAttribute('server');
+            var serverip = (server == 'dev' ? devip : prodip);
+
+            $.post( serverip + "phpscripts/UserExists.php", { username: elem.value})
+                    .done(function( data ) {
+                        console.log( "Data Loaded: " + data );
+                    });
+        }, 500)
+    }
+    function toggle_server_creds(elem) {
+        var server = (elem.value == 'd' ? "dev" : "prod");
+        var stat = $('#' + server + "-pubblyuser").prop('disabled');
+        $('#' + server + "-pubblyuser").prop('disabled', !stat);
+    }
+    function register(elem) {
+        var i_username = elem.form.username.value;
+        var i_password = elem.form.password.value;
+        var i_confirm = elem.form.confirmpwd.value;
+        var i_email = elem.form.email.value;
+
+        if (i_password === i_confirm) {
+            if (i_username && i_email) {
+                if (i_password.length >= 6) {
+                    var p = document.createElement("input");
+                    document.getElementById("registrationForm").appendChild(p);
+                    p.name = "password";
+                    p.type = "hidden";
+                    p.value = hex_sha512(password.value);
+                    i_password = "";
+                    i_confirm = "";
+                    submitForm();
+                    return true;
+                }   else    {
+                    setError("Error: Password too short!");
+                }
+            }   else    {
+                setError("Error: Missing some information!");
+            }
+        } else {
+            setError("Error: Passwords do not match!");
+        }
+    }
+    function submitForm() {
+        $("#registrationForm").attr("action","formActions/register.php");
+        $("#registrationForm").submit();
+    }
+    function setError(mesg) {
+        $(".error").html(mesg);
+        $(".error").css("visibility","visible");
+        window.setTimeout(function() {
+            $(".error").css("visibility","hidden");
+        },250);
+        window.setTimeout(function() {
+            $(".error").css("visibility","visible");
+        },500);
+    }
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
