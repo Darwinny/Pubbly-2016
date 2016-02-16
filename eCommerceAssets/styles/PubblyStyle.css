@@ -6,38 +6,20 @@ a:hover {
 /*header*/
 header {
 	font-family: 'Montserrat', sans-serif;
-	color: rgba(227,99,36,1.00);
-	font-size: 16px;
-	font-style: normal;
-	font-weight: 400;
-	padding-left:40px;
+}
 
-}
-/* Logo placeholder*/
-#logo {
-	float: left;
-	padding-top: 10px;
-	padding-bottom: 2px;
-	width: 139px;
-	text-align: center;
-	color: rgba(255,255,255,1.00);
-	background-color: rgba(255,255,255,1.00);
-}
-/* div for Links in header */
 #headerLinks {
 	float: right;
-	width: calc( 100% - 139px );
-	text-align: right;
-	padding-bottom: 15px;
-	padding-top:10px;
+	padding-bottom: 1%;
+	padding-top:1%;
+	font-family: 'Montserrat', sans-serif;
 	background-color: rgba(255,255,255,1.00);
 }
 /* Links in header */
 #headerLinks a {
 	text-decoration: none;
 	color: rgba(136,103,172,1.00);
-	padding-left: 88px;
-	font-size: 14px;
+	font-size: 1em;
 }
 /* Offer text banner*/
 #offer {
@@ -45,31 +27,34 @@ header {
 	clear: both;
 	background-color: #3a4d81;
 	color: white;
-	padding-left: 40px;
-	padding-top:10px;
-	padding-bottom: 10px;
+	padding-left: 2%;
+	padding-top:1%;
+	padding-bottom: 1%;
 	border-radius: 5px;
 	text-align:left;
 	letter-spacing: 1px;
 
 }
 #splash {
-	clear:both
+	clear:both;
+	overflow: auto;
+
 }
 .balls  {
-	float:left;
-	padding-left: 50px;
-	padding-bottom:30px;
-	width:12%;
-	margin:0;
-	
+	float: left;
+	padding-left: 1.5%;
+	padding-right: 1%;
+	padding-bottom: 1%;
+	width: 14%;
 }
 .button1 {
+	position: relative;
 	background-image: url(../../homepageAssets/purplep.svg);
-    pattern:one;
-	width:160px;
-	height:160px;
+	background-repeat: no-repeat;
+	background-size:100% 100%;
 	text-decoration:none;
+	width: 84%;
+	height: 164px;
 	cursor:pointer;
 	background-color:white;
 	border:none;
@@ -78,11 +63,13 @@ header {
 	background-image: url(../../homepageAssets/bookpur.svg);
 }
 .button2 {
+	position: relative;
 	background-image: url(../../homepageAssets/blueu.svg);
-    pattern:one;
-	width:160px;
-	height:160px;
+    background-repeat: no-repeat;
+	background-size:100% 100%;
 	text-decoration:none;
+	width: 84%;
+	height: 164px;
 	cursor:pointer;
 	background-color:white;
 	border:none;
@@ -91,10 +78,12 @@ header {
 	background-image: url(../../homepageAssets/audioblue.svg);
 }
 .button3 {
-	background-image: url(../../homepageAssets/orangeb.svg);
-    pattern:one;
-	width:160px;
-	height:160px;
+	position: relative;
+    background-image: url(../../homepageAssets/orangeb.svg);
+    background-repeat: no-repeat;
+	background-size:100% 100%;
+	width: 84%;
+	height: 164px;
 	text-decoration:none;
 	cursor:pointer;
 	background-color:white;
@@ -104,10 +93,12 @@ header {
 	background-image: url(../../homepageAssets/textorange.svg);
 }
 .button4 {
+	position: relative;
 	background-image: url(../../homepageAssets/redb.svg);
-    pattern:one;
-	width:160px;
-	height:160px;
+    background-repeat: no-repeat;
+	background-size:100% 100%;
+	width: 84%;
+	height: 164px;
 	text-decoration:none;
 	cursor:pointer;
 	background-color:white;
@@ -117,10 +108,12 @@ header {
 	background-image: url(../../homepageAssets/animred.svg);
 }
 .button5 {
-	background-image: url(../../homepageAssets/bluel.svg);
-    pattern:one;
-	width:160px;
-	height:160px;
+	position: relative;
+    background-image: url(../../homepageAssets/bluel.svg);
+    background-repeat: no-repeat;
+	background-size:100% 100%;
+	width: 84%;
+	height: 164px;
 	text-decoration:none;
 	cursor:pointer;
 	background-color:white;
@@ -130,10 +123,12 @@ header {
 	background-image: url(../../homepageAssets/quizblue.svg);
 }
 .button6 {
-	background-image: url(../../homepageAssets/greeny.svg);
-    pattern:one;
-	width:160px;
-	height:160px;
+	position: relative;
+    background-image: url(../../homepageAssets/greeny.svg);
+    background-repeat: no-repeat;
+	background-size:100% 100%;
+	width: 84%;
+	height: 164px;
 	text-decoration:none;
 	cursor:pointer;
 	background-color:white;
@@ -146,7 +141,7 @@ header {
 #content {
 	clear: both;
 	overflow: auto;
-	padding-top: 29px;
+	padding-top: 2%;
 }
 /* main content of the site */
 #content .mainContent {
@@ -162,7 +157,7 @@ header {
 	border-radius:50px;
 	float:left;
 	background-color:#8867ac;
-	margin-left:67px;
+	margin-left:68px;
 }
 
 .darkbluedot {
@@ -252,9 +247,13 @@ header {
 	height: 35px;
 	color: rgba(255,255,255,1.00);
 	border-style: none;
-	font-size: 14px;
+	font-size: 1em;
 	text-transform: uppercase;
 	margin-top: 8px;
+	border-radius:5px;
+	font-family: 'Montserrat', sans-serif;
+	letter-spacing:1px;
+
 }
 /* footer */
 #mainWrapper footer {
