@@ -1,0 +1,72 @@
+@charset "utf-8";
+body {
+    background-color: white;
+    font: san-serif;
+}
+
+#logo2016 {
+    position: relative;
+    width: 50%;
+    margin-top: 50px;
+    margin-left: 30%;
+    margin-bottom: 50%;
+    margin-bottom: 50px;
+
+}
+
+#logindesign {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 330px;
+    font: san-serif;
+}
+
+input {
+    border: 2px solid #91bd49;
+    height: 50px;
+    width: 300px;
+    border-radius: 5px;
+    margin: 20px;
+}
+
+#username {
+    font-size: 2em;
+    color: #e36324;
+    padding-left: 5px;
+    letter-spacing: 1px;
+}
+
+#password {
+    font-size: 2em;
+    color: #e36324;
+    padding-left: 5px;
+    letter-spacing: 1px;
+}
+
+#submit {
+    width: 100px;
+    height: 55px;
+    border: 1px solid #8867ac;
+    background-color: #8867ac;
+    color: white;
+    font-size: 1em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+#submit:hover {
+    width: 100px;
+    height: 55px;
+    border: 3px solid #91bd49;
+    background-color: #8867ac;
+    color: white;
+    font-size: 1em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+#register {
+    float: right;
+    margin-top: 36px;
+}
