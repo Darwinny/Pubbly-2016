@@ -13,6 +13,7 @@ class HTMLTemplate
         "error" => "html/error.html",
         "login" => "html/login.html",
         "registerSuccess" => "html/registerSuccess.html",
+        "homepage" => "html/homepage.html",
     ];
     public function echoHTML($name, $replace, $with) {
         $loc = $this->templateKey[$name];
