@@ -10,8 +10,8 @@ window.setTimeout(function () {
 
 
     // TODO: Remove this shit, it's a tester ONLY!
-    document.getElementById("username").value = "Jason";
-    document.getElementById("password").value = "HowardRoarkLaughed";
+    document.getElementById("username").value = "";
+    document.getElementById("password").value = "";
 }, 1);
 function login() {
     var elem = document.getElementById('loginForm');
