@@ -5,34 +5,28 @@
     <link href="css/authorTestingLoginPage.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-
 <div id="mainWrapper">
     <div id="logo">
         <img id="logo2016" src="assets/pubblylogo2016.svg">
     </div>
 
     <div id="logindesign">
-        <form action="formActions/processLogin.php" method="post" name="processLogin">
+        <form id="loginForm" method="post" name="processLogin">
             <span style="color:#3a4d81; font-family:sans-serif; letter-spacing:1px; font-size:1.2em">Username</span>:
             <input id="username" type="text" name="username"/><br>
             <span style="color:#3a4d81; font-family:sans-serif; letter-spacing:1px; font-size:1.2em">Password</span>:
-            <input id="password" type="password" name="pass" id="pass"/>
-            <br><input id="submit" type="submit" value="Login"/>
+            <input id="password" type="password"/>
+            <br><input id="submit" type="submit" value="Login" onClick="login()"/>
             <a href="register.php" id="register">Register</a>
+            <input id="redirect" type="hidden" value="{redirectURL}"/>
         </form>
+        <p id="errorTitle">{curTitle}</p>
+
+        <p id="errorMesg">{curMessage}</p>
     </div>
+</div>
 </body>
+
 </html>
-
-<script>
-    // Clear the username and password field
-    window.setTimeout(function() {
-        document.getElementById("username").value = "";
-        document.getElementById("password").value = "";
-
-
-        // TODO: Remove this shit, it's a tester ONLY!
-        document.getElementById("username").value = "Jason";
-        document.getElementById("password").value = "HowardRoarkLaughed";
-    },1);
-</script>
+<script src="js/sha512.js"></script>
+<script src="js/loginForm.js"></script>

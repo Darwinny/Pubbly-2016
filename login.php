@@ -11,13 +11,17 @@ set_include_path('php/mainClasses');
 require "DBCalls.php";
 require "secSession.php";
 require "HTMLTemplate.php";
+$redirectURL = isset($_GET['redirectURL']) ? $_GET['redirectURL'] : false;
+
 sec_session_start();
 $username = isset($_SESSION['username']) ? $_SESSION['username'] : false;
 if ($username) {
     echo "logged in";
 }   else    {
     $template = new HTMLTemplate();
-    $template->echoHTML('login',false,false);
+    $replace = array('{redirectURL}');
+    $with = array($redirectURL);
+    $template->echoHTML('login',$replace,$with);
 }
 
 

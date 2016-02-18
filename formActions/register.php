@@ -80,16 +80,19 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['emai
     // rights to do registration, by checking what type of user is attempting to
     // perform the operation.
 
-    if (empty($error_msg)) {
+    // TODO: if the statement object is still up, we haven't done errorMessaging in vars, instead with headers.
+    // Maybe we'll never get here, the header(url) might not work but might also not throw a FATAL error
+    // Put in an extra fail safe... or rework, this is messy stupid
+    if (true/*still here*/) {
 
         // Create hashed password using the password_hash function.
         // This function salts it with a random salt and can be verified with
         // the password_verify function.
-        $password = password_hash($password, PASSWORD_BCRYPT);
+        $hash = password_hash($password, PASSWORD_DEFAULT);
 
         // Insert the new user into the database
-        if ($insert_stmt = $mysqli->prepare("INSERT INTO readers (username, email, password) VALUES (?, ?, ?)")) {
-            $insert_stmt->bind_param('sss', $username, $email, $password);
+        if ($insert_stmt = $mysqli->prepare("INSERT INTO readers (username, email, password, hash) VALUES (?, ?, ?, ?)")) {
+            $insert_stmt->bind_param('ssss', $username, $email, $password, $hash);
             // Execute the prepared query.
             if (! $insert_stmt->execute()) {
                 header('Location: ../error.php?num=504');

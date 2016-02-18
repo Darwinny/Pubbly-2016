@@ -70,3 +70,12 @@ input {
     float: right;
     margin-top: 36px;
 }
+#errorMesg {
+    text-align:center;
+    color:red;
+    font-size:18px;
+    display:none;
+}
+#errorTitle {
+    display:none;
+}
