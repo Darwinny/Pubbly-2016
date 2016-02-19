@@ -9,6 +9,7 @@
     width: calc(25% - 8px);
     height: 24px;
     margin-right:10px;
+    margin-bottom:2%; /*added margin*/
     font-family: 'Montserrat', sans-serif;
     background-color: rgba(90, 172, 197, 1.00);
     color: #FFFFFF;
